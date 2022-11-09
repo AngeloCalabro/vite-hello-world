@@ -1,30 +1,38 @@
 <template>
-    <div>
-       <!-- {{image}} -->
+       <img :src="getImagePath(`../assets/img/${image}`)" alt="immagine">
         <TitleHero/>
-    </div>
 </template>
   
 <script>
 import TitleHero from './TitleHero.vue';
     export default {
-        componets:{
+        components:{
         TitleHero
         },
         name: 'AppHero',
         data(){
             return{
-                image : '../assets/img/fswd.png'
+                image : 'fswd.png'
+            }
+        },
+        methods :{
+            getImagePath: function(imgPath){
+                return new URL (imgPath, import.meta.url).href;
             }
         }
     }
 </script>
   
 <style lang="css" scoped>
-div{
-    width: 100%;
-    height: 200px;
-    position: relative;
-    background-color: red
-};
+
+img{
+    object-fit: cover;
+    object-position: center;
+    width: 80%;
+    height: 50vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 </style>

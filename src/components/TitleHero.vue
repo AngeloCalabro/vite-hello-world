@@ -19,11 +19,12 @@
   
 <style lang="css" scoped>
 div {
-    text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: black;
+    text-align: center;
+    color: #dedede;
+    text-shadow: 10px 5px 10px #0f0559;
 } 
 </style>

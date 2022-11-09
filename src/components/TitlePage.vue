@@ -17,5 +17,8 @@
 <style lang="css" scoped>
   h1{
     text-align: center;
+    color: #0f0559;
+    text-shadow: 5px 5px 8px #9b31f7;
+    margin-bottom: 20px;
   }
 </style>
